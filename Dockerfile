@@ -15,7 +15,7 @@ RUN npx ng build --configuration production
 FROM nginx:alpine
 
 # Copia la carpeta 'browser' que contiene el build Angular
-COPY --from=build /app/dist/ripis-todo/browser /usr/share/nginx/html
+COPY --from=build /app/dist/ripis-todo /usr/share/nginx/html
 
 # Lista archivos para debug (opcional)
 RUN ls -la /usr/share/nginx/html
