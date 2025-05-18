@@ -14,6 +14,6 @@ FROM nginx:alpine
 
 COPY --from=build /app/dist/ripis-todo /usr/share/nginx/html
 
-EXPOSE 4200
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
