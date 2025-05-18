@@ -1,0 +1,21 @@
+<div class="ContenRegistro">
+  <form class="form">
+    <div class="IniciarSesion">
+      <p class="title">Iniciar Sesion </p>
+      <a (click)="redirigirConRecargaAngular('/Registro')">Registro</a>
+    </div>
+    <p class="message"> Inicia Sesión y unete a nosotros para tener acceso a toda la aplicación </p>
+
+    <label>
+      <input class="input" type="text" placeholder="" required="">
+      <span>Correo Electronico</span>
+    </label>
+
+    <label>
+      <input required="" placeholder="" type="email" class="input">
+      <span>Contraseña</span>
+    </label>
+    <button class="submit">Iniciar Sesion</button>
+  </form>
+</div>
+<router-outlet />

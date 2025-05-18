@@ -1,0 +1,143 @@
+/* Sección de Miembros del Proyecto */
+.miembros {
+  background-color: #ffffff;
+  color: #3d3d3d;
+  padding: 40px 20px;
+
+  animation: fadeIn 0.8s ease-in-out both; /* FadeIn para la sección */
+}
+
+/* Animación de FadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título principal */
+.miembros h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #8dbf65;
+  animation: slideDesdeArriba 1s ease-out; /* Animación de slide en el título */
+}
+
+/* Animación de slide desde arriba para el título */
+@keyframes slideDesdeArriba {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los títulos de cada universidad */
+.miembros .universidad h2 {
+  color: #3d3d3d;
+  border-left: 5px solid #578e7e;
+  padding-left: 15px;
+  margin: 30px;
+  animation: slideDesdeIzquierda 1s ease-out; /* Animación de slide desde izquierda */
+}
+
+/* Animación de slide desde la izquierda para los títulos de las universidades */
+@keyframes slideDesdeIzquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilo para cada tarjeta */
+.tarjeta {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  width: 48%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+  animation: slideDesdeAbajo 1s ease-out forwards; /* Animación de slide desde abajo */
+}
+
+/* Animación de slide desde abajo para las tarjetas */
+@keyframes slideDesdeAbajo {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect para las tarjetas */
+.tarjeta:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al hacer hover */
+  transform: translateY(-5px); /* Ligeramente eleva la tarjeta */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo para las imágenes de los miembros */
+.tarjeta img {
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Estilo para la información dentro de la tarjeta */
+.tarjeta .info {
+  flex: 1;
+}
+
+/* Estilo para la información de la tarjeta (p) */
+.tarjeta .info p {
+  margin: 3px 0;
+}
+
+/* Estilo para los logos de las universidades */
+.tarjeta .logo-u {
+  width: 60px;
+  height: auto;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .universidad .tarjeta {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tarjeta img,
+  .tarjeta .logo-u {
+    margin: 0 auto;
+  }
+}

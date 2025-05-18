@@ -1,0 +1,194 @@
+.container {
+    width: auto;
+    margin: auto;
+    padding: 50px;
+
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animaciones para el header */
+header h1 {
+    font-size: 32px;
+    color: #4CAF50;
+    /* Color verde para resaltar el título */
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: slideDesdeArriba 1s ease-out;
+    /* Animación para el h1 */
+}
+
+header p {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1.6;
+    animation: slideDesdeAbajo 1s ease-out;
+    /* Animación para el párrafo */
+}
+
+/* Sección ODS */
+.ods-section {
+    margin: 40px 0;
+}
+
+/* Título de la sección ODS */
+.ods-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    font-weight: 700;
+    animation: fadeIn 1s ease-out;
+    /* Animación para el título */
+}
+
+/* Grid de los items ODS */
+.ods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilo para cada item ODS */
+.ods-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideDesdeAbajo 1s ease-out;
+}
+
+/* Hover effect para los items ODS */
+.ods-item:hover {
+    transform: translateY(-10px);
+    /* Eleva el card al hacer hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra más intensa */
+}
+
+/* Estilo para los títulos de los items ODS */
+.ods-item h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    /* Color verde para los títulos */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Estilo para los párrafos de los items ODS */
+.ods-item p {
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Estilo para las imágenes dentro de cada item */
+.ods-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ods-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsividad - Ajustes para pantallas pequeñas */
+@media (max-width: 900px) {
+    .ods-grid {
+        grid-template-columns: 1fr;
+        /* Cambia a una sola columna en pantallas pequeñas */
+    }
+
+    .ods-image img {
+        width: 200px;
+        /* Asegura que la imagen ocupe el 100% del contenedor */
+
+    }
+
+    /* Estilo de la lista */
+    ul {
+        list-style-type: disc;
+        margin-left: 40px;
+        text-align: justify;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+}
+    /* Sección de Compromiso */
+    .commitment {
+        text-align: left;
+        padding: 20px;
+        background-color: #ffffff;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
+        
+        padding-bottom: 25px;
+        
+    }
+
+    .commitment h2 {
+        font-size: 2.2em;
+        color: #4CAF50;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .commitment p {
+        font-size: 1.1em;
+        padding: 20px;
+        text-align: left;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideDesdeArriba {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+            /* Desplazamiento hacia arriba */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideDesdeAbajo {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+            /* Desplazamiento hacia abajo */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

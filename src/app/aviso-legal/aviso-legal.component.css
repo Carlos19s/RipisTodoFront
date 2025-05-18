@@ -1,0 +1,52 @@
+.aviso-legal {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    height: 350px;
+    animation: desvanecer 1.5s ease-out;
+}
+
+.aviso-legal h2 {
+    text-align: center;
+    color: #333;
+}
+
+.aviso-legal p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.aviso-legal a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.aviso-legal a:hover {
+    text-decoration: underline;
+}
+
+@keyframes desplazamiento {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

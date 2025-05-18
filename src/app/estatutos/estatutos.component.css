@@ -1,0 +1,80 @@
+.estatutos {
+  background-color: #ffffff;
+  color: #3d3d3d;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  animation: fadeIn 1s ease-in-out;
+  .contenedor {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    color: #578e7e;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #666;
+  }
+
+  .año {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #999;
+  }
+
+  .bloque {
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    strong {
+      color: #578e7e;
+      font-weight: bold;
+    }
+
+    .firmas {
+      margin-top: 40px;
+      font-weight: bold;
+      text-align: center;
+      color: #444;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .bloque {
+      padding: 20px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

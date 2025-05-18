@@ -1,0 +1,227 @@
+/* Animaciones */
+@keyframes slideDesdeIzquierda {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); /* Empieza desde la izquierda */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Finaliza en su posición original */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Estilo para el contenedor del formulario */
+.ContenRegistro {
+  margin: 10px;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  height: 500px;
+  animation: fadeIn 1s ease-out; /* Animación de desvanecimiento para el contenedor */
+}
+
+/* Estilo para el formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  box-shadow: 0 0px 20px rgba(105, 105, 105, 0.525);
+  animation: fadeIn 1s ease-out; /* Animación para el formulario */
+}
+
+/* Título del formulario con animación */
+.title {
+  font-size: 28px;
+  color: rgb(72, 188, 78);
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  animation: slideDesdeIzquierda 1s ease-out; /* Desplazamiento desde la izquierda */
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: rgb(72, 188, 78);
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: rgb(72, 188, 78);
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+/* Estilo para los mensajes */
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+/* Estilo para el contenedor de los campos de entrada */
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+/* Estilos para los inputs */
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.form label .input+span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid+span {
+  color: green;
+}
+
+/* Estilo para el botón de enviar */
+.submit {
+  border: none;
+  outline: none;
+  background-color: rgb(72, 188, 78);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  width: 108%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #4b9c4b;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+.submit:active {
+  transform: translateY(-1px);
+}
+
+/* Estilo de la opción de iniciar sesión */
+.IniciarSesion a {
+  color: white;
+  text-decoration: none;
+  background-color: #4b9c4b;
+  margin: auto;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.IniciarSesion a:hover {
+  cursor: pointer;
+}
+
+.IniciarSesion {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 75% 25%;
+  gap: 30px;
+}
+
+/* Estilo del Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

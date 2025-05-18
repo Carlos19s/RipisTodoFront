@@ -1,0 +1,75 @@
+<div class="carousel-container" #carouselElement (mousedown)="startDrag($event)" (mousemove)="onDrag($event)"
+  (mouseup)="endDrag($event)" (mouseleave)="endDrag($event)">
+
+  <div class="carousel-slide" [class.fade]="isFading">
+    <img [src]="images[currentIndex]" alt="Imagen {{ currentIndex }}" draggable="false" />
+  </div>
+
+  <!-- CONTENIDO SOBRE LA IMAGEN -->
+  <div class="ConteidoCarrusel">
+    <h1 class="titulo-ripis">RIPIS</h1>
+    <p class="descripcionCarrusel">
+      La plataforma de investigación colaborativa que potencia tu análisis.
+    </p>
+    <a href="#mapaCircular" class="btn-transparent" (click)="scrollToMapa($event)">Ver Mapa Circular</a>
+  </div>
+
+  <button (click)="prevImage()" class="prev-btn">&#10094;</button>
+  <button (click)="nextImage()" class="next-btn">&#10095;</button>
+</div>
+
+<!-- stats-container -->
+<div class="stats-container" #statsContainer>
+  <div class="info">
+    <p class="amount">+$1M</p>
+    <p class="description">invertidos en fondos para Ciencia Tecnología e Innovación</p>
+  </div>
+  <div class="info">
+    <p class="amount">+1200</p>
+    <p class="description">investigadores y docentes beneficiados mediante los programas de fondos</p>
+  </div>
+  <div class="info">
+    <p class="amount">+$100K</p>
+    <p class="description">captados para financiamiento de proyectos de investigación y desarrollo social</p>
+  </div>
+</div>
+
+<h1 class="title">Red Internacional de Investigación en Procesos de Ingeniería Sostenible</h1>
+
+<!-- mapa circular -->
+<div id="mapaCircular" class="MapaCircular" #mapaCircular>
+  <div class="mapa">
+    <img src="MapaCircular.png" alt="Mapa" class="mapa-img" draggable="false" />
+  </div>
+  <div class="redireccion">
+    <fieldset class="cuadro">
+      <legend class="leyenda">Apartados RIPIS</legend>
+      <p>Sobre Nosotros</p>
+      <p>Objetivos</p>
+      <p>Miembros</p>
+      <p>Contactanos</p>
+      <p>BLOG RIPIS</p>
+      <p>Investigadores</p>
+      <p>Universidades</p>
+      <p>Registro Senecyt</p>
+      <p>Imagen Institucional</p>
+      <p>Estatutos</p>
+      <p>AENIT</p>
+      <p>Planificación</p>
+    </fieldset>
+  </div>
+</div>
+
+<!-- Newsletter -->
+<div class="newsletter" #newsletter>
+  <div class="newsletter-image">
+    <img src="news.svg" alt="Imagen de noticia" class="news-img" />
+  </div>
+  <div class="newsletter-text">
+    <h2 class="newsletter-title">RIPIS</h2>
+    <p class="descriptionNews">¡NO TE PIERDAS LAS NOVEDADES DE NUESTROS BENEFICIOS! <br> RECIBE NUESTROS BOLETINES Y
+      NOTICIAS EN TU CORREO ELECTRÓNICO.</p>
+    <p class="footer-note">* Sus datos personales son estrictamente para nuestro uso y puede darse de baja en cualquier
+      momento.</p>
+  </div>
+</div>

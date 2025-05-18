@@ -1,0 +1,116 @@
+@keyframes slideDesdeArriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Empieza desde arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Finaliza en su posición original */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Título principal - Planificación de Actividades */
+h1 {
+  text-align: center; /* Centrado del título */
+  color: #578e7e; /* Color verde */
+  font-size: 2.5em; /* Tamaño grande para el título */
+  font-weight: 700; /* Peso de la fuente en negrita */
+  margin-bottom: 40px; /* Espaciado debajo del título */
+  animation: slideDesdeArriba 1s ease-out; /* Animación de desplazamiento desde arriba */
+}
+
+
+.Contenedor_Planificacion {
+  padding: 20px;
+  margin: auto;
+  width: 75%;
+}
+
+/* Contenedor de las celdas del calendario */
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+  /* El borde fue reemplazado por sombra */
+  border-radius: 10px;
+  
+}
+
+.ContenidoGeneral {
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 2s ease-out forwards; /* Animación de desvanecimiento */
+}
+
+/* Sombra más intensa al pasar el ratón sobre las tarjetas */
+.ContenidoGeneral:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+  transform: translateY(-5px); /* Sube ligeramente la tarjeta */
+}
+
+/* Estilo para los títulos dentro de las tarjetas */
+.ContenidoGeneral h2 {
+  font-size: 16px;
+  color: #578e7e;
+  font-weight: 600;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+/* Estilo para las actividades */
+.Actividad {
+  display: grid;
+  font-weight: bold;
+  align-content: center;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+/* Ocultar contenido para pantallas pequeñas */
+.ActividadTelefono {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 780px) {
+  .contenido {
+    grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
+    gap: 20px;
+  }
+
+  .Contenedor_Planificacion {
+    grid-auto-rows: auto;
+  }
+
+  .Subtitulos .ContenidoGeneral {
+    display: none;
+  }
+
+  .ActividadTelefono {
+    position: relative;
+    opacity: 1;
+  }
+
+  .Subtitulos {
+    border: none;
+  }
+}

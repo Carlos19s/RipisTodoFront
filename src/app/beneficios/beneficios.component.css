@@ -1,0 +1,129 @@
+/* Animación de FadeIn y Slide */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDesdeIzquierda {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Contenedor principal */
+main {
+  width: auto;
+  
+  padding: auto;
+  background-color: #f4f7f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo general para el contenedor de la sección */
+.Contenedor {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 40% 60%;
+  gap: 5px;
+  
+  animation: fadeInUp 1s ease-out forwards; /* Animación de FadeIn */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 900px) {
+  .Contenedor {
+    grid-template-columns: none;
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+
+  .Beneficios,
+  .Objetivos {
+    width: 80%;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    margin: auto;
+  }
+}
+
+/* Estilo para los títulos */
+h1, h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #578e7e;
+  animation: slideDesdeIzquierda 1s ease-out; /* Animación de slide desde la izquierda */
+}
+
+/* Subtítulos (h2) con animación */
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out; /* Animación de fade */
+}
+
+.subtitle span {
+  font-weight: lighter;
+}
+
+/* Estilo para los párrafos */
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-out; /* Animación de fade */
+}
+
+/* Estilo para los contenedores de Beneficios y Objetivos */
+.Beneficios, .Objetivos {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* Iniciar oculto */
+}
+
+/* Efecto Hover sobre las secciones */
+.Beneficios:hover, .Objetivos:hover {
+  background-color: #eef3e6; /* Color de fondo al pasar el mouse */
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+/* Estilo para la sección de Beneficios y Objetivos */
+h2 {
+  color: #333;
+  border-left: 5px solid #578e7e;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Estilos de las tarjetas dentro de Beneficios y Objetivos */
+.Beneficios, .Objetivos {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .Contenedor {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+

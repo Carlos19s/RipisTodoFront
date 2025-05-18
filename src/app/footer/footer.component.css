@@ -1,0 +1,175 @@
+main {
+  flex-grow: 1; /* Asegura que main se expanda */
+  
+}
+
+.footer {
+  background: #FFFAEC;
+  padding: 20px 10px;
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  border-top: 1px solid #e0e0e0;
+  
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  animation: desplazamiento 0.5s ease-in-out;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.footer-section p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.footer-socials a {
+  margin-right: 8px;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.footer-links-columns {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-columns li {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links-columns a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.footer-links-columns a:hover {
+  color: #007acc;
+}
+
+.footer-links-columns i {
+  color: #bbb;
+  font-size: 10px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-top: 5px;
+  display: block;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #2c2c2c;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-links-columns {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    margin: 10px auto;
+    max-width: 90px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
+@keyframes desplazamiento {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+@keyframes desplazamientoDerecha {
+  0% {
+      opacity: 0;
+      transform: translateX(1000%);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes desvanecer {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}

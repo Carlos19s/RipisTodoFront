@@ -1,0 +1,103 @@
+  <section class="Navegacion">
+  <section class="Logos">
+    <a (click)="redirigirConRecargaAngular('')"><img [src]="images" alt="Imagen"/> </a>
+    <a (click)="redirigirConRecargaAngular('')">RIPIS</a>
+  </section>
+
+  <button class="menu-toggle" (click)="toggleMenu()">
+    {{ menuVisible ? '' : '☰' }}
+  </button>
+  <section class="enlaces">
+
+    <ul class="menu" [class.menu-active]="menuVisible">
+      <!-- Botón de cerrar menú solo visible cuando el menú está activo -->
+      <button class="close-menu" *ngIf="menuVisible" (click)="toggleMenu()">X</button>
+      <li class="submenu-trigger Acerca" (mouseenter)="mostrarSubmenu('Acerca')"
+          (mouseleave)="ocultarSubmenu('Acerca')">
+        <a >Acerca</a>
+        <ul class="submenu-box submenu-Acerca" [style.opacity]="submenuActivo === 'Acerca' ? '1' : '0'"
+            [style.visibility]="submenuActivo === 'Acerca' ? 'visible' : 'hidden'">
+          <li class="opciones">
+            <a (click)="redirigirConRecargaAngular('/sobre-nosotros')">Sobre Nosotros</a>
+            <a (click)="redirigirConRecargaAngular('/Miembros')">Nuestros Miembros</a>
+          </li>
+          <li class="opciones">
+            <a (click)="redirigirConRecargaAngular('/Ods')">ODS</a>
+            <a (click)="redirigirConRecargaAngular('/senecyt')" (click)="navigateAndReload()">
+              Registro Senescyt
+            </a>
+          </li>
+          <li class="opciones opciones-ultimo">
+            <a (click)="redirigirConRecargaAngular('/Estatutos')">Estatutos</a>
+            <a (click)="redirigirConRecargaAngular('/marca')">Imagen Institucional</a>
+
+          </li>
+        </ul>
+      </li>
+
+      <li class="submenu-trigger Beneficios" (mouseenter)="mostrarSubmenu('Beneficios')"
+          (mouseleave)="ocultarSubmenu('Beneficios')">
+        <a (click)="redirigirConRecargaAngular('/beneficios')">Objetivos</a>
+
+      </li>
+
+      <li class="submenu-trigger Publicaciones" (mouseenter)="mostrarSubmenu('Publicaciones')"
+          (mouseleave)="ocultarSubmenu('Publicaciones')">
+      <!--<a (click)="redirigirConRecargaAngular('/Blog')">Blog RIPIS</a>-->
+      </li>
+
+      <li class="submenu-trigger Comunidad" (mouseenter)="mostrarSubmenu('Comunidad')"
+          (mouseleave)="ocultarSubmenu('Comunidad')">
+        <a>Comunidad</a>
+        <ul class="submenu-box submenu-Comunidad" [style.opacity]="submenuActivo === 'Comunidad' ? '1' : '0'"
+            [style.visibility]="submenuActivo === 'Comunidad' ? 'visible' : 'hidden'">
+          <li class="opciones">
+            <a (click)="redirigirConRecargaAngular('/Unialiadas')">Universidades Aliadas</a>
+            <a (click)="redirigirConRecargaAngular('/sobre-nosotros')">Sobre Nosotros</a>
+          </li>
+            <!--<li class="opciones opciones-ultimo">
+            <a (click)="redirigirConRecargaAngular('/Blog')">Blog</a>  
+          </li> -->
+        </ul>
+      </li>
+
+      <li class="submenu-trigger Eventos" (mouseenter)="mostrarSubmenu('Eventos')"
+          (mouseleave)="ocultarSubmenu('Eventos')">
+        <a >Eventos</a>
+        <ul class="submenu-box submenu-Eventos" [style.opacity]="submenuActivo === 'Eventos' ? '1' : '0'"
+            [style.visibility]="submenuActivo === 'Eventos' ? 'visible' : 'hidden'">
+          <li class="opciones">
+            <p>Agenda</p>
+            <a (click)="redirigirConRecargaAngular('/Planificacion')">Planificacion Anual</a>
+          </li>
+          <!--<li class="opciones">
+            <p>Programas</p>
+          <a (click)="redirigirConRecargaAngular('/perfil')"> PERFIL</a>
+          </li>-->
+          <li class="opciones opciones-ultimo">
+            <p>Congresos</p>
+            <a href="https://aenit.utn.edu.ec/" target="_blank">Aenit 2023</a>
+            <a href="https://aenit.utn.edu.ec/2024/" target="_blank">Aenit 2024</a>
+            <a href="https://aenit.utn.edu.ec/2025/" target="_blank">Aenit 2025</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="submenu-trigger Contacto" (click)="mostrarSubmenu('Contacto')">
+        <a (click)="redirigirConRecargaAngular('/contacto')">Contacto</a>
+        <ul class="submenu-box submenu-Contacto" *ngIf="submenuActivo === 'Contacto'">
+          <li class="opciones">
+
+          </li>
+        </ul>
+      </li>
+      <div class="BotonTelefonoRegistro">
+       <!-- <button class="BotonRegistro" (click)="redirigirConRecargaAngular('/Registro')">Registro</button>-->
+      </div>
+    </ul>
+    <div class="Contenedor-Boton">
+      <!-- <button class="BotonRegistro" (click)="redirigirConRecargaAngular('/Registro')">Registro</button> -->
+    </div>
+
+  </section>
+</section>

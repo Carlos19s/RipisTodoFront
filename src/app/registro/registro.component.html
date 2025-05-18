@@ -1,0 +1,54 @@
+<main>
+  <section class="ContenRegistro">
+    <form class="form">
+      <div class="IniciarSesion">
+        <p class="title">Registro </p>
+        <a (click)="redirigirConRecargaAngular('/Iniciarsesion')">Iniciar Sesion</a>
+      </div>
+      <p class="message">Signup now and get full access to our app. </p>
+
+      <label>
+        <input class="input" type="text" placeholder="" required="">
+        <span>Cedula</span>
+      </label>
+
+      <label>
+        <input class="input" type="text" placeholder="" required="">
+        <span>Nombres</span>
+      </label>
+
+      <label>
+        <input class="input" type="text" placeholder="" required="">
+        <span>Apellidos</span>
+      </label>
+
+      <label>
+        <input class="input" type="url" placeholder="" required="">
+        <span>ORCID</span>
+      </label>
+
+      <label>
+        <input class="input" type="url" placeholder="" required="">
+        <span>Institucion o Afiliacion</span>
+      </label>
+
+      <label>
+        <input class="input" type="url" placeholder="" required="">
+        <span>Perfil Academico</span>
+      </label>
+
+      <label>
+        <input required="" placeholder="" type="email" class="input">
+        <span>Email</span>
+      </label>
+
+      <label>
+        <input class="input" type="text" placeholder="" required="">
+        <span>Contraseña</span>
+      </label>
+
+      <button class="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+<router-outlet />

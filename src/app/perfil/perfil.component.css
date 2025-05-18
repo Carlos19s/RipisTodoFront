@@ -1,0 +1,376 @@
+
+/* Título principal */
+h1 {
+
+    animation: slideDesdeArriba 0.5s ease-out; 
+  }
+
+/* Contenedor principal centrado */
+.profileContainer {
+    animation: slideDesdeArriba 0.5s ease-out; 
+    margin: auto;
+    display: grid;
+
+
+    justify-items: center;
+    align-items: start;
+
+    height: auto;
+    width: auto;
+
+    padding: 20px;
+}
+
+/* Estilo para la sección del perfil */
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el aside izquierdo */
+.asideIzquierda {
+    background-color: #d0f5c3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 20px;
+    min-width: 500px;
+}
+
+.asideCentral {
+    background-color: #d0f5c3;
+    padding: 15px;
+    margin-right: 20px;
+    text-align: center;
+    min-width: 500px;
+}
+
+/* Estilo para el aside derecho */
+.asideDerecha {
+    display: flex;
+    /* Usamos Flexbox para apilar los bloques */
+    flex-direction: column;
+    /* Apilamos los elementos en columna */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    margin-top: 84px;
+}
+
+/* Estilo general del bloque de Opciones */
+.bloqueOpciones {
+    background-color: #d0f5c3;
+    border-radius: 10px;
+
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos del botón */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilo de la lista de opciones */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del Modal */
+.modal {
+    display: none;
+    /* Modal oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    /* Queda por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilo para las publicaciones */
+.bloqueDePublicaciones {
+    background-color: #d0f5c3;
+    border-radius: 10px;
+
+    padding: 15px;
+    text-align: center;
+    width: auto;
+    /* Asegura que ocupe todo el ancho */
+}
+
+/* Estilo de las publicaciones destacadas */
+.destacadas {
+    display: flex;
+    flex-direction: column;
+    /* Apila las publicaciones de arriba hacia abajo */
+    gap: 20px;
+    /* Añade espacio entre las publicaciones */
+}
+
+.publicacion {
+    background-color: #f9f9f9;
+    /* Fondo claro para resaltar cada publicación */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Relleno para un aspecto limpio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para un toque 3D */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Añade transición para hover */
+}
+
+.publicacion:hover {
+    transform: translateY(-5px);
+    /* Eleva ligeramente la publicación cuando se pasa el cursor */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* Aumenta la sombra al hacer hover */
+}
+
+.publicacion h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    /* Color más oscuro para los títulos */
+}
+
+.publicacion p {
+    font-size: 14px;
+    color: #555;
+    /* Color gris para el texto */
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.publicacion a {
+    color: #007BFF;
+    /* Color azul para el enlace */
+    text-decoration: none;
+    /* Quitar subrayado por defecto */
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.publicacion a:hover {
+    color: #0056b3;
+    /* Cambia el color al pasar el ratón */
+}
+
+/* Ajuste de estilo para la sección de "PUBLICACIONES DESTACADAS" */
+p strong {
+    font-size: 22px;
+    color: #333;
+    /* Color más oscuro para el título principal */
+    border-bottom: 2px solid #007BFF;
+    /* Línea azul debajo para destacar */
+    padding-bottom: 10px;
+}
+
+.InformacionInvestigador {
+    padding: 15px;
+    background-color: #f0f0f0;
+    text-align: left;
+    border-radius: 10px;
+}
+
+
+/* Estilos generales */
+p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.FotoPerfil {
+    width: 200px;
+
+}
+
+/* Diseño responsivo */
+@media (min-width: 768px) {
+    .profileContainer {
+        grid-template-columns: 1fr 3fr;
+        /* Dos columnas en pantallas medianas */
+    }
+
+    .asideDerecha {
+        grid-template-columns: 1fr 1fr;
+        /* Opciones y publicaciones lado a lado */
+    }
+}
+
+@media (min-width: 1024px) {
+    .profileContainer {
+        grid-template-columns: 1fr 4fr;
+        /* Más espacio para el contenido */
+    }
+
+    .asideDerecha {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*BOTONES PERFIL*/
+
+
+.btnProfile {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 10px;
+}
+
+.btnProfile:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.btnProfile:active {
+    transform: translateY(-1px);
+}
+
+.btnProfileDanger {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 10px;
+}
+
+.btnProfileDanger:hover {
+    background-color: #c42323;
+    box-shadow: 0px 15px 20px rgba(229, 95, 46, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.btnProfileDanger:active {
+    transform: translateY(-1px);
+}
+
+/* From Uiverse.io by alexruix */
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.input:hover,
+.input:focus,
+.input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+}
+
+.input-group:hover .label,
+.input:focus {
+    color: #05060fc2;
+}
+
+
+/* Animaciones */
+@keyframes slideDesdeArriba {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Empieza desde arriba */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Finaliza en su posición original */
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
